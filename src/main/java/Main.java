@@ -1,11 +1,10 @@
-import org.reflections.Reflections;
+import game.GameManager;
 
-import java.util.Set;
+import java.lang.reflect.InvocationTargetException;
 
 public class Main {
-    public static void main(String[] args){
-        Reflections reflections = new Reflections();
-        Set<Class<? extends Character>> subTypes = reflections.getSubTypesOf(Character.class);
-        System.out.println(subTypes.size());
+    public static void main(String[] args) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
+        GameManager gm = new GameManager(3);
+        gm.play();
     }
 }

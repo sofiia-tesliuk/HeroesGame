@@ -2,6 +2,6 @@ package character;
 
 public class Knight extends KingWithTheSoulOfKnight{
     public Knight() {
-        super(2, 12);
+        super("Knight", 2, 12);
     }
 }
